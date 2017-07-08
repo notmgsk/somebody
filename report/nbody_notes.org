@@ -1,0 +1,34 @@
+#+STARTUP: indent
+#+STARTUP: content
+
+* Intro
+** Gravity
+*** All bodies in system interact with all other bodies
+    Specifically $$\frac{d^2\vec{x}_i}{dt^2} 
+    = -\sum_{j\neq i}\frac{G m_j \left(\vec x_i- \vec x_j\right)}{\left|\vec x_i - \vec x_j\right|^3}$$.
+*** Interaction is non-linear
+    Small changes in a system's initial position will lead to significant changes in the
+    system's final position.
+
+    Code will depend on a time-step used for integration. If this time-step is made
+    smaller, how will this affect the integration? Will choosing a smaller time-step
+    change the long-term behaviour?
+** Integration methods overview
+   Numerical Methods in Astrophysics (2007) lists 5 methods for integrating:
+*** Runge-Kutta
+    Standard technique for solving ODEs
+*** Bulirsch-Stoer
+    Very accurate for few-body simulations ("nine bodies orbiting central star")
+*** Symplectic map
+    Useful for very long time integrations; not suitable for close encounters
+*** Predictor-corrector
+    Accurate for simulations with many bodies
+*** Second-order leapfrag method
+    Used for simulations of large systems
+*** Such methods all have issues with close encounters
+** Euler and Runge-Kutta methods
+*** 
+* Other (todos, etc)
+
+** TODO Research / write about close encounters
+   This will be an important topic in the report. Related terms "softening", "relaxation"
